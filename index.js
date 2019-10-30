@@ -7,6 +7,7 @@ const allowedChannels = ['GNTRBT3QA',  // bot squad
 'GECRA8741', // it devs
 'GED6NQTNX', // it
 'C2TV7N10C', // QA
+'G5R0KSCV8 ', // QA Internal
 'GMQJ70QGG', // classic wow
 'CECEET1H8', // photoshop
 'CMVMYBD1S',  // mean team
