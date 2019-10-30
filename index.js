@@ -27,12 +27,12 @@ app.post('/', function (req, res) {
     console.log('BODY', body)
     
     if (allowedChannels.indexOf(event.channel) > -1){
-        res.status(200).send();
-    }
-    else{
         maybeSendALol(body.token, event, () => {
             res.status(200).send()
         })
+    }
+    else{
+        res.status(200).send()
     }
 
     
