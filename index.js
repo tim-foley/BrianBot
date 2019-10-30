@@ -43,7 +43,7 @@ app.post('/', function (req, res) {
 
 function maybeSendALol(token, event, cb){
     const RARE_MESSAGES = ['Shut Up Spencer'];
-    const LMAO_MESSAGES = ['haha', 'LOL'];
+    const LMAO_MESSAGES = ['lmao', 'LOL'];
     const LOL_MESSAGES = ['lol', 'haha']
     let listToUse;
     if (determineRandomness(2, 10000000)){
