@@ -11,7 +11,8 @@ const allowedChannels = ['GNTRBT3QA',  // bot squad
 'GMQJ70QGG', // classic wow
 'CECEET1H8', // photoshop
 'CMVMYBD1S',  // mean team
-'D9ZL22ECB' // personal dev channel
+'D9ZL22ECB', // personal dev channel
+'C2TJFKL1W', // random
 ] 
 
 app.use(bodyParser());
