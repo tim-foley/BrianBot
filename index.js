@@ -44,13 +44,13 @@ function maybeSendALol(token, event, cb){
     const LMAO_MESSAGES = ['haha', 'LOL'];
     const LOL_MESSAGES = ['lol', 'haha']
     let listToUse;
-    if (determineRandomness(1, 10000000)){
+    if (determineRandomness(2, 10000000)){
         listToUse = RARE_MESSAGES
     }
-    else if (determineRandomness(1, 1000)){
+    else if (determineRandomness(2, 1000)){
         listToUse = LMAO_MESSAGES;
     }
-    else if (determineRandomness(1, 5)){
+    else if (determineRandomness(2, 3)){
         listToUse = LOL_MESSAGES;
     }
     else{
@@ -63,7 +63,9 @@ function maybeSendALol(token, event, cb){
 }
 
 function determineRandomness(expectedVal, outcomes){
-    return Math.floor(Math.random() * outcomes) === expectedVal;
+    let randomNum = Math.floor(Math.random() * outcomes);
+    console.log('randomness', expectedVal, outcomes)
+    return randomNum === expectedVal;
 }
 
 function sendLol(token, event, message, cb) {
