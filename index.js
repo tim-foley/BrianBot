@@ -49,10 +49,10 @@ function maybeSendALol(token, event, cb){
     if (determineRandomness(2, 10000000)){
         listToUse = RARE_MESSAGES
     }
-    else if (determineRandomness(2, 1000)){
+    else if (determineRandomness(2, 100000)){
         listToUse = LMAO_MESSAGES;
     }
-    else if (determineRandomness(2, 100)){
+    else if (determineRandomness(2, 1000)){
         listToUse = LOL_MESSAGES;
     }
     else{
