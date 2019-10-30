@@ -9,7 +9,8 @@ const allowedChannels = ['GNTRBT3QA',  // bot squad
 'C2TV7N10C', // QA
 'GMQJ70QGG', // classic wow
 'CECEET1H8', // photoshop
-'CMVMYBD1S'  // mean team
+'CMVMYBD1S',  // mean team
+'D9ZL22ECB' // personal dev channel
 ] 
 
 app.use(bodyParser());
@@ -64,7 +65,7 @@ function maybeSendALol(token, event, cb){
 
 function determineRandomness(expectedVal, outcomes){
     let randomNum = Math.floor(Math.random() * outcomes);
-    console.log('randomness', expectedVal, outcomes)
+    console.log('randomness', expectedVal, outcomes, randomNum)
     return randomNum === expectedVal;
 }
 
