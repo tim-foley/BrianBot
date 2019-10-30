@@ -25,7 +25,6 @@ app.post('/', function (req, res) {
         return;
     }
     const event = body ? body.event : null;
-    console.log('BODY', body)
     
     if (allowedChannels.indexOf(event.channel) > -1){
         maybeSendALol(body.token, event, () => {
@@ -51,7 +50,7 @@ function maybeSendALol(token, event, cb){
     else if (determineRandomness(2, 1000)){
         listToUse = LMAO_MESSAGES;
     }
-    else if (determineRandomness(2, 3)){
+    else if (determineRandomness(2, 100)){
         listToUse = LOL_MESSAGES;
     }
     else{
@@ -65,7 +64,6 @@ function maybeSendALol(token, event, cb){
 
 function determineRandomness(expectedVal, outcomes){
     let randomNum = Math.floor(Math.random() * outcomes);
-    console.log('randomness', expectedVal, outcomes, randomNum)
     return randomNum === expectedVal;
 }
 
