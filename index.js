@@ -42,17 +42,17 @@ app.post('/', function (req, res) {
 })
 
 function maybeSendALol(token, event, cb){
-    const RARE_MESSAGES = ['Shut Up Spencer'];
-    const LMAO_MESSAGES = ['lmao', 'LOL'];
-    const LOL_MESSAGES = ['lol', 'haha']
+    const RARE_MESSAGES = ['Shut Up Spencer', 'What is that smell? Oh, it was Spencer.'];
+    const LMAO_MESSAGES = ['lmao', 'LOL', 'that is hilarious'];
+    const LOL_MESSAGES = ['lol', 'haha','that is awesome']
     let listToUse;
     if (determineRandomness(2, 10000000)){
         listToUse = RARE_MESSAGES
     }
-    else if (determineRandomness(2, 33333)){
+    else if (determineRandomness(2, 10000)){
         listToUse = LMAO_MESSAGES;
     }
-    else if (determineRandomness(2, 333)){
+    else if (determineRandomness(2, 100)){
         listToUse = LOL_MESSAGES;
     }
     else{
